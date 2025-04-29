@@ -1,4 +1,4 @@
-# lab2
+# lab2-lab3
 flex css, grid css, no-flex-grid css
 
 **Лабораторна робота №2 **
