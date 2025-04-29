@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 400px; /* було 300px, стало 400px */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "first first first"
+      "menu three four"
+      "five five four"
+      "six six six";
+    min-height: 100vh;
+  }
+  
+  
+  /* Верхня частина (шапка) */
+  .first {
+    background-color: #b0d0e8; /* блакитний */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: first;
+  }
+  
+  /* Ліве меню */
+  .menu {
+    background-color: #f8cce0; /* рожевий */
+    padding: 20px;
+    grid-area: menu;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  /* Центральний контент — новини */
+  .three {
+    background-color: #e0f5ff; /* світло-блакитний */
+    padding: 20px;
+    grid-area: three;
+  }
+  
+  /* Правий блок — корисне */
+  .four {
+    background-color: #f8cce0; /* рожевий */
+    padding: 20px;
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+  
+  /* Підвал контенту */
+  .five {
+    background-color: #faf5c8; /* світло-жовтий */
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    grid-area: five;
+    height: auto;
+    align-self: stretch; /* Робимо так, щоб блок закінчувався на рівні блоку .four */
+  }
+  
+  /* Футер */
+  .six {
+    background-color: #b0d0e8; /* блакитний */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    grid-area: six;
+    height: auto;
+    align-items: center;
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr; /* Один стовпець на маленьких екранах */
+      grid-template-areas:
+        "first"
+        "menu"
+        "three"
+        "four"
+        "five"
+        "six";
+    }
+  
+    .menu, .three, .four {
+      width: 100%;
+    }
+  }
+  

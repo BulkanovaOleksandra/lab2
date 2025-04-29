@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Шапка */
+.first {
+  background-color: #b0d0e8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Блоки на екрані */
+.menu-three-four {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Ліве меню */
+.menu {
+  float: left;
+  width: 20%;
+  background-color: #f8cce0;
+  padding: 20px;
+  min-height: 400px;
+}
+
+/* Центральний блок */
+.three {
+  float: left;
+  width: 45%;
+  background-color: #e0f5ff;
+  padding: 20px;
+  min-height: 400px;
+}
+
+/* Правий блок — Корисне */
+.four {
+  float: left;
+  width: 35%;
+  background-color: #f8cce0;
+  padding: 20px;
+  min-height: 400px; /* Блок 4 буде рівень з блоком 3 */
+}
+
+/* Блок 5 — під меню і три, займає ширину меню + три */
+.five {
+  clear: both;
+  width: 65%; /* меню + три (20% + 45%) */
+  background-color: #faf5c8;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+}
+
+/* Блок 6 — футер */
+.six {
+  clear: both;
+  width: 100%;
+  background-color: #b0d0e8;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Меню */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .menu, .three, .four, .five {
+    float: none;
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+  }
+
+  .six {
+    text-align: center;
+  }
+}

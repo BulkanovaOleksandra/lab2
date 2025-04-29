@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Верхня частина (шапка) */
+.first {
+  background-color: #b0d0e8; /* блакитний */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Основний контент: меню + новини + корисне */
+.menu-three-four {
+  display: flex;
+  flex: 1;
+}
+
+/* Ліве меню */
+.menu {
+  background-color: #f8cce0; /* рожевий */
+  padding: 20px;
+  width: 200px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Центральний контент — новини */
+.three {
+  background-color: #e0f5ff; /* світло-блакитний */
+  padding: 20px;
+  flex: 2;
+}
+
+/* Правий блок — корисне */
+.four {
+  background-color: #f8cce0; /* рожевий */
+  padding: 20px;
+  width: 300px;
+  flex-grow: 1;  /* Додаємо властивість flex-grow, щоб блок займав більше простору */
+  min-height: 100%;  /* Висота мінімальна, щоб блок зайняв більше простору по вертикалі */
+}
+
+/* Підвал контенту */
+.five {
+  background-color: #faf5c8; /* світло-жовтий */
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  flex-grow: 0; /* Оскільки цей блок не має розтягуватись, його flex-grow = 0 */
+}
+
+/* Футер */
+.six {
+  background-color: #b0d0e8; /* блакитний */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .menu-three-four {
+    flex-direction: column;
+  }
+
+  .menu, .three, .four {
+    width: 100%;
+  }
+}
